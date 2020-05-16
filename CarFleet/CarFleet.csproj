@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">anycpu</Platform>
+    <ProjectGuid>{8BBC5A09-4CCA-4C11-AB0A-054845A048D8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CarFleet</RootNamespace>
+    <AssemblyName>CarFleet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|anycpu' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|anycpu' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DriverFolder\Driver.cs" />
+    <Compile Include="VehicleFolder\Vehicle.cs" />
+    <Compile Include="Enums\EnumVehicleType.cs" />
+    <Compile Include="VehicleFolder\VehicleTypesFolder\NavalVehicle.cs" />
+    <Compile Include="VehicleFolder\VehicleTypesFolder\WheeledVehicle.cs" />
+    <Compile Include="VehicleFolder\WheeledVehicleFolder\Bicycle.cs" />
+    <Compile Include="VehicleFolder\WheeledVehicleFolder\MotorVehicle.cs" />
+    <Compile Include="VehicleFolder\MotorVehicleFolder\Car.cs" />
+    <Compile Include="VehicleFolder\MotorVehicleFolder\Truck.cs" />
+    <Compile Include="DriverFolder\DriverTypesFolder\NavalDriver.cs" />
+    <Compile Include="DriverFolder\DriverTypesFolder\WheeledDriver.cs" />
+    <Compile Include="VehicleFolder\NavalVehicleFolder\Kayak.cs" />
+    <Compile Include="VehicleFolder\NavalVehicleFolder\Ship.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DriverFolder\" />
+    <Folder Include="VehicleFolder\" />
+    <Folder Include="Enums\" />
+    <Folder Include="VehicleFolder\VehicleTypesFolder\" />
+    <Folder Include="VehicleFolder\WheeledVehicleFolder\" />
+    <Folder Include="VehicleFolder\MotorVehicleFolder\" />
+    <Folder Include="DriverFolder\DriverTypesFolder\" />
+    <Folder Include="VehicleFolder\NavalVehicleFolder\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
